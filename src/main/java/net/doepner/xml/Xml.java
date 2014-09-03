@@ -36,12 +36,12 @@ public class Xml implements Tree {
 
     private final Node root;
 
-    public Xml(Path path) {
-        this(new InputSource(path.toFile().toURI().toASCIIString()));
-    }
-
     public Xml(String payload) {
         this(new InputSource(new StringReader(payload)));
+    }
+
+    public Xml(Path path) {
+        this(new InputSource(path.toFile().toURI().toASCIIString()));
     }
 
     public Xml(InputSource inputSource) {
